@@ -1,89 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Date Time</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            background: #D3959B;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #BFE6BA, #D3959B);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #BFE6BA, #D3959B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .container {
-            background-color: #F7A4A4;
-            margin-top: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        .date {
-            
-            font-size: 40px;
-            margin: 50px 50px;
-            padding: 30px 30px;
-            color: #fff;
-        }
-        .time {
-            
-            font-size: 40px;
-            margin: 50px 50px;
-            padding: 30px 30px;
-            color: #fff;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        height: 100vh;
+        width: 100vw;
+        background: #8A2387;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .box {
+        background: #EA047E;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+      }
+      .box > div {
+        font-size: 40px;
+        padding: 20px 100px;
+        color: #FCE700;
+      }
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: aliceblue;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #F27121;
+        height: 40px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div id="date" class="date"></div>
+      <div class="box">
         <div id="time" class="time"></div>
+        <div id="day" class="day"></div>
+        <div id="date" class="date"></div>
+      </div>
+      <div class="footer">Designed by Jitendra Asole&copy;</div>
     </div>
-    
-    
 
     <script>
-        var date = new Date()
-        var currDate = date.getDate()
-        var month = date.getMonth()
-        var year = date.getFullYear()
-        var day = date.getDay()
+      var date = new Date();
+      var currDate = date.getDate();
+      var month = date.getMonth();
+      month ++
+      var year = date.getFullYear();
+      var day = date.getDay();
 
-        switch (day) {
-            case 0: day= "Sunday"
-                break;
-            case 1: day= "Monday"
-                break;
-            case 2: day= "Tuesday"
-                break;
-            case 3: day= "Wednesday"
-                break;
-            case 4: day= "Thursday"
-                break;
-            case 5: day= "Friday"
-                break;
-            case 6: day= "Saturday"
-                break;
-            default:
-                break;
-        }
-        
-        document.getElementById('date').innerHTML = "Date:" + currDate + "/" + month + "/" + year + "<br>" + day
-        
-        var time = date.getHours()
-        var part
-        if (time<12){
-            part = "AM"
-        } else {
-            part = "PM"
-        }
-        time = time-12;
-        var mins = date.getMinutes()
-        document.getElementById('time').innerHTML ="Time: "+ time + ":" + mins + " " + part;
+      switch (day) {
+        case 0:
+          day = "Sunday";
+          break;
+        case 1:
+          day = "Monday";
+          break;
+        case 2:
+          day = "Tuesday";
+          break;
+        case 3:
+          day = "Wednesday";
+          break;
+        case 4:
+          day = "Thursday";
+          break;
+        case 5:
+          day = "Friday";
+          break;
+        case 6:
+          day = "Saturday";
+          break;
+        default:
+          break;
+      }
+      switch (month) {
+        case 1: month = "January"
+            break;
+        case 2: month = "February"
+            break;
+        case 3: month = "March"
+            break;
+        case 4: month = "April"
+            break;
+        case 5: month = "May"
+            break;
+        case 6: month = "June"
+            break;
+        case 7: month = "July"
+            break;
+        case 8: month = "August"
+            break;
+        case 9: month = "September"
+            break;
+        case 10: month = "October"
+            break;
+        case 11: month = "November"
+            break;
+        case 12: month = "December"
+            break;
+      
+        default:
+            break;
+      }
+      
+      document.getElementById("date").innerHTML = day + ", " + month + " " + currDate + ", " + year;
+
+      //   document.getElementById("day").innerHTML = day;
+      
+      var hours = date.getHours();
+      var part;
+      if (hours < 12) {
+        part = "AM";
+      } else {
+        part = "PM";
+      }
+      hours = hours - 12;
+      var mins = date.getMinutes();
+      if (mins < 10) {
+        mins = "0" + mins;
+      }
+      document.getElementById("time").innerHTML = hours + ":" + mins + " " + part;
     </script>
-</body>
+  </body>
 </html>
