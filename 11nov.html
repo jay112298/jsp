@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Time</title>
+    <style>
+        body {
+            background: #D3959B;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #BFE6BA, #D3959B);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #BFE6BA, #D3959B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background-color: #F7A4A4;
+            margin-top: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .date {
+            
+            font-size: 40px;
+            margin: 50px 50px;
+            padding: 30px 30px;
+            color: #fff;
+        }
+        .time {
+            
+            font-size: 40px;
+            margin: 50px 50px;
+            padding: 30px 30px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="date" class="date"></div>
+        <div id="time" class="time"></div>
+    </div>
+    
+    
+
+    <script>
+        var date = new Date()
+        var currDate = date.getDate()
+        var month = date.getMonth()
+        var year = date.getFullYear()
+        var day = date.getDay()
+
+        switch (day) {
+            case 0: day= "Sunday"
+                break;
+            case 1: day= "Monday"
+                break;
+            case 2: day= "Tuesday"
+                break;
+            case 3: day= "Wednesday"
+                break;
+            case 4: day= "Thursday"
+                break;
+            case 5: day= "Friday"
+                break;
+            case 6: day= "Saturday"
+                break;
+            default:
+                break;
+        }
+        
+        document.getElementById('date').innerHTML = "Date:" + currDate + "/" + month + "/" + year + "<br>" + day
+        
+        var time = date.getHours()
+        var part
+        if (time<12){
+            part = "AM"
+        } else {
+            part = "PM"
+        }
+        time = time-12;
+        var mins = date.getMinutes()
+        document.getElementById('time').innerHTML ="Time: "+ time + ":" + mins + " " + part;
+    </script>
+</body>
+</html>
