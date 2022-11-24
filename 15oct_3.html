@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.sum {
+			color: #ff7788;
+			text-decoration: underline;
+			/*text-shadow: 6px 6px 2px black;*/
+		}
+		.diff {
+			color: #ca0548;
+		}
+		.product {
+			color: #af7863;
+		}
+		.div {
+			color: #bd1569;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		var a, b, sum, diff, product, div
+		a = parseInt(prompt("Enter the first number"))
+		b = parseInt(prompt("Enter the first number"))
+
+		sum = a+b
+		diff = a - b
+		product = a * b
+		div = a / b
+
+		document.write("<h1 class='sum'>The addition is "+sum+ ".</h1>")
+		document.write("<h1 class='diff'>The subtraction is "+diff+".</h1>")
+		document.write("<h1 class='product'>Multiplication "+product+".</h1>")
+		document.write("<h1 class='div'>Division "+div+" </h1>")
+	</script>
+</body>
+</html>

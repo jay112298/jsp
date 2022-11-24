@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #F7F8F8;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #ACBB78, #F7F8F8);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #ACBB78, #F7F8F8);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .box {
+            padding: 15px 15px;
+            background: #0F2027;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border-radius: 15px;
+            color: aliceblue;
+
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            background-color: #0F2027;
+            color: #F7F8F8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Javascript Boolean</h1>
+        <div class="out" id="out"></div>
+        <div class="out" id="out2"></div>
+        <div class="out" id="out3"></div>
+    </div>
+    <div class="footer">Designed by Jitendra Asole &reg;</div>
+    <script>
+        var num1 = 20;
+        var num2 = 2;
+        if (num1 > num2) {
+            data = "True";
+        } else {
+            data = "False";
+        }
+
+        var data2 = Boolean(num1>num2)
+
+        var out = ""
+        if(data2 == 1) {
+            out = "True It works both are same"
+        } else {
+            out = "No it doesn't work "
+        }
+
+        document.getElementById('out').innerHTML = data + " " ;
+        document.getElementById('out2').innerHTML = data2 + " " ;
+        document.getElementById('out3').innerHTML = out + " " ;
+    </script>
+</body>
+
+</html>

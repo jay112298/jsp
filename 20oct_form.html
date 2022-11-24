@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+</head>
+<body>
+	<form>
+		<input method="post" id="n1" placeholder="Enter first number"><br><br>
+		<input method="post" id="n2" placeholder="Enter second number"><br><br>
+		<input method="post" id="n3" placeholder="Enter third number"><br><br>
+		<input type="button" value="Check" onClick="bigNum()">
+	</form>
+
+	<script type="text/javascript">
+		function bigNum() {
+			var n1 = document.getElementById('n1').value;
+			var n2 = document.getElementById('n2').value;
+			var n3 = document.getElementById('n3').value;
+
+			// alert(n1)
+			// alert(n2)
+			// alert(n3)	
+
+			var big=n1;
+			if (big<n2) {
+				big = n2
+			}
+			if (big<n3) {
+				big= n3
+			}
+			alert("The largest number is: "+big)
+	}
+		
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>An Array</title>
+	<style type="text/css">
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#output {
+			background-color: #F7A4A4;
+			padding: 50px 40px;
+			margin-top: 100px;
+			font-size: 20px;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div id="output"></div>
+	<script type="text/javascript">
+		var data = new Array()
+
+		data[0] = "Hello, this is javascript code";
+		data[1] = "Syntaxt I use is called ECMASCRIPT";
+		data[2] = "I recieved major updates with the ES6 release";
+		data[3] = "I am world's most popular language";
+		var d = ""
+
+		var colors = ["red", "blue", "cyan", "#FFFBC1"]
+
+		for (var i = 0; i <= 3; i++) {
+			d += "<p style='color:"+ colors[i] + "'>"+ data[i] + "</p> <br>";
+		}
+		document.getElementById('output').innerHTML = d;
+	</script>
+</body>
+</html>
