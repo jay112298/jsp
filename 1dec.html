@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 100vh;
+            width: 100vw;
+            background: #2C3E50;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #FD746C, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #FD746C, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        .output {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2D033B;
+            height: 300px;
+            width: 300px;
+            color: #E5B8F4;
+            padding: 50px;
+            font-size: 50px;
+            border-radius: 10px;
+        }
+    </style>
+    <title>If Else JSP</title>
+</head>
+<body>
+    <div class="container">
+        <div id="output" class="output"></div>
+
+    </div>
+    <script>
+        var num1 = parseInt(prompt("Please enter the first number: "))
+        var num2 = parseInt(prompt("Please enter the second number: "))
+
+        if(num1 > num2) {
+            document.getElementById('output').innerHTML = num1 + " is the greatest number"
+        } else {
+            document.getElementById('output').innerHTML = num2 + " is the greatest number"
+        }
+    </script>
+</body>
+</html>
