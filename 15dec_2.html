@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling 2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        try {
+            zoom(10,20,30,30)
+        } catch (error) {
+            document.write(error.message)
+        }
+
+        var n1 = 5630, n2 = 1000
+        var sum = n1 + n2
+        document.write("<br> The addition is "+ sum)
+    </script>
+</body>
+</html>
