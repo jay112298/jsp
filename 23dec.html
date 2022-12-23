@@ -12,9 +12,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
         #btn{
-            font-size: 100px;
+            font-size: 80px;
             padding: 10px;
         }
     </style>
@@ -22,7 +23,8 @@
 <body>
     <div class="container">
         <div class="center">
-            <button onmouseover="mouseOver()" onmouseout="mouseOut()" id="btn">Hover over me</button>
+            <button onmouseover="mouseOver()" onmouseout="mouseOut()" onclick="clearAll()" id="btn">Hover over me</button>
+        
         </div>
     </div>
     <script>
@@ -39,6 +41,10 @@
             document.getElementById('btn').style.color = "white"
             document.getElementById('btn').style.marginLeft = "-100px"
             document.getElementById('btn').style.transition = "1s"
+        }
+
+        function clearAll() {
+            document.getElementById('btn').removeAttribute('style')
         }
     </script>
 </body>
